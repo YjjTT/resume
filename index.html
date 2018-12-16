@@ -3,10 +3,21 @@
     <head>
         <title>姜涛的个人简历</title>
         <link rel="stylesheet" href="./a.css">
+        <script src="//at.alicdn.com/t/font_968023_j5pkrs3gnil.js"></script>
+        <style type="text/css">
+            .icon {
+                width: 1em; height: 1em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+        }
+</style>
     </head>
     <body>
-        <div class="topNavBar clearfix">
-            <a href="#" class="logo" alt="logo" style="float: left;">
+        <div class="topNavBar">
+
+            <div class="topNavBar-inner clearfix">
+                <a href="#" class="logo" alt="logo" style="float: left;">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
             
@@ -35,20 +46,25 @@
                     </li>
                 </ul>
             </nav>
-        </div>
-
-        <div class="banner" style="background-image: url(#);">
+            </div>
             
         </div>
 
+        <div class="banner">
+            <div class="mask"></div>
+        </div>
+
         <main>
-            <div class="card">
-                <div class="picture">
-                    <img src="#" alt="头像">
+            <div class="userCard">
+
+                <div class="pictureAndText clearfix">
+                    <div class="picture">
+                    <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
                 </div>
                 <div class="text">
-                    <div class="summary">
-                        <span class="welcome">Hello</span>
+                        <span class="welcome">Hello
+                            <span class="traiangle"></span>
+                        </span>
                         <h1>姜涛</h1>
                         <p>前端开发工程师</p>
                         <hr>
@@ -62,17 +78,35 @@
                             <dt>手机</dt>
                             <dd>17612184301</dd>
                         </dl>
-                    </div>
-                    <footer class="media">
-                        <a href="#"><img src="#" alt="..."></a>
-                        <a href="#"><img src="#" alt="..."></a>
-                        <a href="#"><img src="#" alt="..."></a>
-                        <a href="#"><img src="#" alt="..."></a>
-                        <a href="#"><img src="#" alt="..."></a>
-                        <a href="#"><img src="#" alt="..."></a>
-                        <a href="#"><img src="#" alt="..."></a>
-                    </footer>
                 </div>
+                </div>
+                <footer class="media">
+                        <a href="https://github.com/YjjTT" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.weibo.com/login.php" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-weibo"></use>
+                            </svg>
+                        </a>
+                        <a href="https://juejin.im/user/5c0a3abaf265da616d53ff59" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-juejin"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.jianshu.com/u/7c22b5c28d4b" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-jianshu"></use>
+                            </svg>
+                        </a>
+                        <a href="https://xiedaimala.com/courses/ec3a5e28-02da-47d6-9226-927db23e82a2#/common" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-jirengulogozaoqi"></use>
+                            </svg>
+                        </a>
+                    </footer>
             </div>
 
             <a href="#" class="button">下载 PDF 简历</a>
