@@ -41,6 +41,7 @@ ul, ol{
 }
 .topNavBar nav {
 	padding-top: 7px;
+	float: right;
 }
 .topNavBar nav > ul{
 	list-style: none;
