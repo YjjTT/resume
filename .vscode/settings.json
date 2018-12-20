@@ -1,0 +1,4 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "vetur.format.defaultFormatter.html": "prettier"
+}
