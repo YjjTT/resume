@@ -14,16 +14,21 @@
             fill: currentColor;
             overflow: hidden;
         }
-        .site-welcome{
+
+        .site-welcome {
             display: none;
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 1;
             background: #888;
             justify-content: center;
             align-items: center;
         }
-        .site-welcome.active{
+
+        .site-welcome.active {
             display: flex;
         }
     </style>
@@ -33,24 +38,34 @@
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
-    <div class="topNavBar">
+    <div class="topNavBar" id="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a href="#" class="logo" alt="logo" style="float: left;">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
-            <nav>
+            <nav class="menu">
                 <ul class="clearfix">
                     <li>
-                        <a href="#">关于</a>
+                        <a href="#siteAbout">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a href="#siteSkills">技能</a>
                     </li>
                     <li>
-                        <a href="#">作品</a>
+                        <a href="#siteWorks">作品</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">博客</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">日历</a>
@@ -69,7 +84,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div id="siteAbout" class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
@@ -130,7 +145,7 @@
             范进行渲染，而不是使用一个不符合规范的渲染模式。
         </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -171,7 +186,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section id="siteWorks" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -209,10 +224,37 @@
         </div>
     </section>
     <script>
-        setTimeout(function(){
+        setTimeout(function () {
             siteWelcome.classList.remove('active');
-        }, 3000)
+        }, 1000)
+
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
+                topNavBar.classList.add('sticky');
+            } else {
+                topNavBar.classList.remove('sticky');
+            }
+        }
+        let liTags = document.querySelectorAll('nav.menu > ul > li');
+        for (let i = 0; i < liTags.length; i++) {
+            liTags[i].onmouseenter = function (x) {
+                x.currentTarget.classList.add('active');
+            }
+            liTags[i].onmouseleave = function (x) {
+                x.currentTarget.classList.remove('active');
+            }
+        }
+        let aTags = document.querySelectorAll('nav.menu > ul > li > a');
+        for(let i = 0; i < aTags.length; i++){
+            aTags[i].onclick = function(x){
+                x.preventDefault();
+                let a = x.currentTarget;
+                let href = a.getAttribute('href');
+                let element = document.querySelector(href);
+                let top = element.offsetTop;
+                window.scrollTo(0, top - 80);
+            }
+        }
     </script>
 </body>
-
 </html>
