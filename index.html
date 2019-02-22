@@ -1,260 +1,332 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>姜涛的个人简历</title>
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./loading.css">
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./loading.css" />
     <script src="//at.alicdn.com/t/font_968023_j5pkrs3gnil.js"></script>
     <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
 
-        .site-welcome {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background: #888;
-            justify-content: center;
-            align-items: center;
-        }
+      .site-welcome {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: #888;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .site-welcome.active {
-            display: flex;
-        }
+      .site-welcome.active {
+        display: flex;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="siteWelcome" class="site-welcome active">
-        <div class="loading"></div>
+      <div class="loading"></div>
     </div>
     <div class="topNavBar" id="topNavBar">
-        <div class="topNavBar-inner clearfix">
-            <a href="#" class="logo" alt="logo" style="float: left;">
-                <span class="rs">RS</span><span class="card">card</span>
-            </a>
-            <nav class="menu">
-                <ul class="clearfix">
-                    <li>
-                        <a href="#siteAbout">关于</a>
-                    </li>
-                    <li>
-                        <a href="#siteSkills">技能</a>
-                    </li>
-                    <li>
-                        <a href="#siteWorks">作品</a>
-                        <ul class="submenu">
-                            <li>作品1</li>
-                            <li>作品2</li>
-                            <li>作品3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">博客</a>
-                        <ul class="submenu">
-                            <li>作品1</li>
-                            <li>作品2</li>
-                            <li>作品3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">日历</a>
-                    </li>
-                    <li>
-                        <a href="#">联系方式</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <div class="topNavBar-inner clearfix">
+        <a href="#" class="logo" alt="logo" style="float: left;">
+          <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav class="menu">
+          <ul class="clearfix">
+            <li>
+              <a href="#siteAbout">关于</a>
+            </li>
+            <li>
+              <a href="#siteSkills">技能</a>
+            </li>
+            <li>
+              <a href="#siteWorks">作品</a>
+              <ul class="submenu">
+                <li>作品1</li>
+                <li>作品2</li>
+                <li>作品3</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">博客</a>
+              <ul class="submenu">
+                <li>作品1</li>
+                <li>作品2</li>
+                <li>作品3</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">日历</a>
+            </li>
+            <li>
+              <a href="#">联系方式</a>
+            </li>
+            <li>
+              <a href="#">其他</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="banner">
-        <div class="mask"></div>
+      <div class="mask"></div>
     </div>
     <main>
-        <div id="siteAbout" class="userCard">
-            <div class="pictureAndText clearfix">
-                <div class="picture">
-                    <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
-                </div>
-                <div class="text">
-                    <span class="welcome">Hello
-                        <span class="traiangle"></span>
-                    </span>
-                    <h1>姜涛</h1>
-                    <p>前端开发工程师</p>
-                    <hr>
-                    <dl>
-                        <dt>年龄</dt>
-                        <dd>18</dd>
-                        <dt>所在城市</dt>
-                        <dd>上海</dd>
-                        <dt>邮箱</dt>
-                        <dd>m17612184301@163.com</dd>
-                        <dt>手机</dt>
-                        <dd>17612184301</dd>
-                    </dl>
-                </div>
-            </div>
-            <footer class="media">
-                <a href="https://github.com/YjjTT" target="_blank">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-github"></use>
-                    </svg>
-                </a>
-                <a href="https://www.weibo.com/login.php" target="_blank">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibo"></use>
-                    </svg>
-                </a>
-                <a href="https://juejin.im/user/5c0a3abaf265da616d53ff59" target="_blank">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-juejin"></use>
-                    </svg>
-                </a>
-                <a href="https://www.jianshu.com/u/7c22b5c28d4b" target="_blank">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-jianshu"></use>
-                    </svg>
-                </a>
-                <a href="https://xiedaimala.com/courses/ec3a5e28-02da-47d6-9226-927db23e82a2#/common" target="_blank">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-jirengulogozaoqi"></use>
-                    </svg>
-                </a>
-            </footer>
+      <div data-x id="siteAbout" class="userCard">
+        <div class="pictureAndText clearfix">
+          <div class="picture">
+            <img src="./img/avatar.jpg" width="299" height="347" alt="头像" />
+          </div>
+          <div class="text">
+            <span class="welcome"
+              >Hello
+              <span class="traiangle"></span>
+            </span>
+            <h1>姜涛</h1>
+            <p>前端开发工程师</p>
+            <hr />
+            <dl>
+              <dt>年龄</dt>
+              <dd>18</dd>
+              <dt>所在城市</dt>
+              <dd>上海</dd>
+              <dt>邮箱</dt>
+              <dd>m17612184301@163.com</dd>
+              <dt>手机</dt>
+              <dd>17612184301</dd>
+            </dl>
+          </div>
         </div>
-        <p class="downloadResume-wrapper">
-            <a href="./download.pdf" class="downloadResume" target="_blank" download="">下载 PDF 简历</a>
-        </p>
-        <p class="selfIntroduction">
-            到的身影。这个声明的目的是防止浏览器在渲染文档时，切换到<br>
-            为“怪异模式(兼容模式)”的渲染模式。确保浏览器按照最佳的<br>
-            范进行渲染，而不是使用一个不符合规范的渲染模式。
-        </p>
+        <footer class="media">
+          <a href="https://github.com/YjjTT" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+          <a href="https://www.weibo.com/login.php" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-weibo"></use>
+            </svg>
+          </a>
+          <a
+            href="https://juejin.im/user/5c0a3abaf265da616d53ff59"
+            target="_blank"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-juejin"></use>
+            </svg>
+          </a>
+          <a href="https://www.jianshu.com/u/7c22b5c28d4b" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-jianshu"></use>
+            </svg>
+          </a>
+          <a
+            href="https://xiedaimala.com/courses/ec3a5e28-02da-47d6-9226-927db23e82a2#/common"
+            target="_blank"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-jirengulogozaoqi"></use>
+            </svg>
+          </a>
+        </footer>
+      </div>
+      <p class="downloadResume-wrapper">
+        <a
+          href="./download.pdf"
+          class="downloadResume"
+          target="_blank"
+          download=""
+          >下载 PDF 简历</a
+        >
+      </p>
+      <p class="selfIntroduction">
+        到的身影。这个声明的目的是防止浏览器在渲染文档时，切换到<br />
+        为“怪异模式(兼容模式)”的渲染模式。确保浏览器按照最佳的<br />
+        范进行渲染，而不是使用一个不符合规范的渲染模式。
+      </p>
     </main>
-    <section id="siteSkills" class="skills">
-        <h2>技能</h2>
+    <section data-x id="siteSkills" class="skills">
+      <h2>技能</h2>
+      <ol class="clearfix">
+        <li>
+          <h3>HTML 5 &amp; CSS 3</h3>
+          <div class="progressBar">
+            <div class="progress" style="width:50%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>iOS开发</h3>
+          <div class="progressBar">
+            <div class="progress" style="width:100%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>Python</h3>
+          <div class="progressBar">
+            <div class="progress" style="width:30%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>React</h3>
+          <div class="progressBar">
+            <div class="progress" style="width:30%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>ReactNative</h3>
+          <div class="progressBar">
+            <div class="progress" style="width:20%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>Vue</h3>
+          <div class="progressBar">
+            <div class="progress" style="width:10%;"></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section data-x id="siteWorks" class="portfolio">
+      <h2>作品集</h2>
+      <nav>
         <ol class="clearfix">
-            <li>
-                <h3>HTML 5 &amp; CSS 3</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width:50%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>iOS开发</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width:100%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>Python</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width:30%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>React</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width:30%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>ReactNative</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width:20%;"></div>
-                </div>
-            </li>
-            <li>
-                <h3>Vue</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width:10%;"></div>
-                </div>
-            </li>
+          <li id="portfolioAll">所有</li>
+          <li id="portfolioFrameWork">框架</li>
+          <li id="portfolioVallina">原生JS&amp;CSS</li>
         </ol>
-    </section>
-    <section id="siteWorks" class="portfolio">
-        <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="portfolioAll">所有</li>
-                <li id="portfolioFrameWork">框架</li>
-                <li id="portfolioVallina">原生JS&amp;CSS</li>
-            </ol>
-            <div id="portfolioBar" class="bar state-1">
-                <div class="bar-inner">
-                </div>
-            </div>
-        </nav>
-        <script>
-            portfolioAll.onclick = function () {
-                portfolioBar.className = 'bar state-1'
-            }
-            portfolioFrameWork.onclick = function () {
-                portfolioBar.className = 'bar state-2'
-            }
-            portfolioVallina.onclick = function () {
-                portfolioBar.className = 'bar state-3'
-            }
-        </script>
-
-        <div class="works" style="height: 597px;">
-            <div class="big" style="top: 0; left:0">
-                <img src="./img/portfolio-1.jpg" alt="作品1">
-            </div>
-            <div class="small" style="top: 0; left: 645px">
-                <img src="./img/portfolio-2.jpg" alt="作品2">
-            </div>
-            <div class="small" style="top: 298px; left: 645px">
-                <img src="./img/portfolio-3.jpg" alt="作品3">
-            </div>
+        <div id="portfolioBar" class="bar state-1">
+          <div class="bar-inner"></div>
         </div>
-    </section>
-    <script>
-        setTimeout(function () {
-            siteWelcome.classList.remove('active');
-        }, 1000)
+      </nav>
+      <script>
+        portfolioAll.onclick = function() {
+          portfolioBar.className = "bar state-1";
+        };
+        portfolioFrameWork.onclick = function() {
+          portfolioBar.className = "bar state-2";
+        };
+        portfolioVallina.onclick = function() {
+          portfolioBar.className = "bar state-3";
+        };
+      </script>
 
-        window.onscroll = function () {
-            if (window.scrollY > 0) {
-                topNavBar.classList.add('sticky');
-            } else {
-                topNavBar.classList.remove('sticky');
-            }
+      <div class="works" style="height: 597px;">
+        <div class="big" style="top: 0; left:0">
+          <img src="./img/portfolio-1.jpg" alt="作品1" />
+        </div>
+        <div class="small" style="top: 0; left: 645px">
+          <img src="./img/portfolio-2.jpg" alt="作品2" />
+        </div>
+        <div class="small" style="top: 298px; left: 645px">
+          <img src="./img/portfolio-3.jpg" alt="作品3" />
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.js"></script>
+    <script>
+      setTimeout(function() {
+        siteWelcome.classList.remove("active");
+      }, 1000);
+
+      let specialTags = document.querySelectorAll("[data-x]");
+      for (let i = 0; i < specialTags.length; i++) {
+        specialTags[i].classList.add("offset");
+      }
+      
+      setTimeout(function() {
+        findClosest();
+      }, 1000);
+
+      window.onscroll = function() {
+        if (window.scrollY > 0) {
+          topNavBar.classList.add("sticky");
+        } else {
+          topNavBar.classList.remove("sticky");
         }
-        let liTags = document.querySelectorAll('nav.menu > ul > li');
-        for (let i = 0; i < liTags.length; i++) {
-            liTags[i].onmouseenter = function (x) {
-                x.currentTarget.classList.add('active');
-            }
-            liTags[i].onmouseleave = function (x) {
-                x.currentTarget.classList.remove('active');
-            }
+        findClosest();
+      };
+      function findClosest() {
+        let specialTags = document.querySelectorAll("[data-x]");
+        let minIndex = 0;
+
+        for (let i = 1; i < specialTags.length; i++) {
+          if (
+            Math.abs(specialTags[i].offsetTop - window.scrollY) <
+            Math.abs(specialTags[minIndex].offsetTop - window.scrollY)
+          ) {
+            minIndex = i;
+          }
         }
-        let aTags = document.querySelectorAll('nav.menu > ul > li > a');
-        for(let i = 0; i < aTags.length; i++){
-            aTags[i].onclick = function(x){
-                x.preventDefault();
-                let a = x.currentTarget;
-                let href = a.getAttribute('href');
-                let element = document.querySelector(href);
-                let top = element.offsetTop;
-                window.scrollTo(0, top - 80);
-            }
+        // minIndex 就是离窗口顶部最近的元素
+        specialTags[minIndex].classList.remove("offset");
+
+        let id = specialTags[minIndex].id;
+        console.log(id);
+        let a = document.querySelector('a[href="#' + id + '"]');
+        let li = a.parentNode;
+        console.log(li);
+        let brothers = li.parentNode.children;
+        for (let i = 0; i < brothers.length; i++) {
+          brothers[i].classList.remove("highlight");
         }
+        li.classList.add("highlight");
+      }
+
+      let liTags = document.querySelectorAll("nav.menu > ul > li");
+
+      for (let i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function(x) {
+          x.currentTarget.classList.add("active");
+        };
+        liTags[i].onmouseleave = function(x) {
+          x.currentTarget.classList.remove("active");
+        };
+      }
+      let aTags = document.querySelectorAll("nav.menu > ul > li > a");
+      function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+      }
+      requestAnimationFrame(animate);
+
+      for (let i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = function(x) {
+          x.preventDefault();
+          let a = x.currentTarget;
+          let href = a.getAttribute("href");
+          let element = document.querySelector(href);
+          let top = element.offsetTop;
+
+          let currentTop = window.scrollY;
+          let targetTop = top - 80;
+          let s = targetTop - currentTop; // 路程
+          var coords = { y: currentTop }; // 起始位置
+          var t = Math.abs((s / 100) * 200); // 時間
+          if (t > 400) {
+            t = 400;
+          }
+          var tween = new TWEEN.Tween(coords) // 起始位置
+            .to({ y: targetTop }, t) // 結束位置和時間
+            .easing(TWEEN.Easing.Quadratic.In) // 緩動類型
+            .onUpdate(function() {
+              // coords.y 已經變了
+              window.scrollTo(0, coords.y); // 如何更新界面
+            })
+            .start(); // 開始緩動
+        };
+      }
     </script>
-</body>
+  </body>
 </html>
