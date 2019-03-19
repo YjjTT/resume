@@ -10,32 +10,6 @@
     <script src="//at.alicdn.com/t/font_968023_j5pkrs3gnil.js"></script>
     <script src="./node_modules/swiper/dist/js/swiper.min.js"></script>
     <link rel="stylesheet" href="./main.css" />
-    <style type="text/css">
-      .icon {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-      }
-
-      .site-welcome {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        background: #888;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .site-welcome.active {
-        display: flex;
-      }
-    </style>
   </head>
 
   <body>
@@ -219,114 +193,14 @@
       
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.js"></script>
+    <script src="./js/auto-slide-up.js"></script>
+    <script src="./js/sticky-topbar.js"></script>
+    <script src="./js/smoothly-navigation.js"></script>
     <script>
       setTimeout(function() {
         siteWelcome.classList.remove("active");
       }, 1000);
-
-      let specialTags = document.querySelectorAll("[data-x]");
-      for (let i = 0; i < specialTags.length; i++) {
-        specialTags[i].classList.add("offset");
-      }
-
-      setTimeout(function() {
-        findClosest();
-      }, 1000);
-
-      window.onscroll = function() {
-        if (window.scrollY > 0) {
-          topNavBar.classList.add("sticky");
-        } else {
-          topNavBar.classList.remove("sticky");
-        }
-        findClosest();
-      };
-      function findClosest() {
-        let specialTags = document.querySelectorAll("[data-x]");
-        let minIndex = 0;
-
-        for (let i = 1; i < specialTags.length; i++) {
-          if (
-            Math.abs(specialTags[i].offsetTop - window.scrollY) <
-            Math.abs(specialTags[minIndex].offsetTop - window.scrollY)
-          ) {
-            minIndex = i;
-          }
-        }
-        // minIndex 就是离窗口顶部最近的元素
-        specialTags[minIndex].classList.remove("offset");
-
-        let id = specialTags[minIndex].id;
-        console.log(id);
-        let a = document.querySelector('a[href="#' + id + '"]');
-        let li = a.parentNode;
-        console.log(li);
-        let brothers = li.parentNode.children;
-        for (let i = 0; i < brothers.length; i++) {
-          brothers[i].classList.remove("highlight");
-        }
-        li.classList.add("highlight");
-      }
-
-      let liTags = document.querySelectorAll("nav.menu > ul > li");
-
-      for (let i = 0; i < liTags.length; i++) {
-        liTags[i].onmouseenter = function(x) {
-          x.currentTarget.classList.add("active");
-        };
-        liTags[i].onmouseleave = function(x) {
-          x.currentTarget.classList.remove("active");
-        };
-      }
-      let aTags = document.querySelectorAll("nav.menu > ul > li > a");
-      function animate(time) {
-        requestAnimationFrame(animate);
-        TWEEN.update(time);
-      }
-      requestAnimationFrame(animate);
-
-      for (let i = 0; i < aTags.length; i++) {
-        aTags[i].onclick = function(x) {
-          x.preventDefault();
-          let a = x.currentTarget;
-          let href = a.getAttribute("href");
-          let element = document.querySelector(href);
-          let top = element.offsetTop;
-
-          let currentTop = window.scrollY;
-          let targetTop = top - 80;
-          let s = targetTop - currentTop; // 路程
-          var coords = { y: currentTop }; // 起始位置
-          var t = Math.abs((s / 100) * 200); // 時間
-          if (t > 400) {
-            t = 400;
-          }
-          var tween = new TWEEN.Tween(coords) // 起始位置
-            .to({ y: targetTop }, t) // 結束位置和時間
-            .easing(TWEEN.Easing.Quadratic.In) // 緩動類型
-            .onUpdate(function() {
-              // coords.y 已經變了
-              window.scrollTo(0, coords.y); // 如何更新界面
-            })
-            .start(); // 開始緩動
-        };
-      }
     </script>
-
-    <script>
-      var mySwiper = new Swiper(".swiper-container", {
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination"
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
-        scrollbar: {
-          el: ".swiper-scrollbar"
-        }
-      });
-    </script>
+    <script src="./js/init-swiper.js"></script>
   </body>
 </html>
