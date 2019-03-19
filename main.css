@@ -56,15 +56,8 @@ section.skills>ol>li:nth-child(even) { float: right; }
 section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 2px; margin: 4px 0 40px; overflow: hidden;}
 section.skills .progressBar .progress { background: #E6686A; width: 50%; height: 100%; border-radius: 2px; transform: translateX(0); transition: all 1s;} 
 section.skills.offset .progress{ transform: translateX(-100%); }
-section.portfolio { text-align: center; margin-bottom: 50px; } 
-section.portfolio>nav { text-align: center; display: inline-block; vertical-align: top; margin-top: 32px; } 
-section.portfolio>nav>ol { display: inline-block; margin: 0 auto; vertical-align: top; }
-section.portfolio>nav>ol>li { float: left; margin-left: 40px; cursor: pointer; }
-section.portfolio>nav>ol>li:first-child { margin-left: 0; } 
-section.portfolio>nav .bar { height: 5px; margin-top: 5px; margin-bottom: 40px; border-radius: 2px; }
-section.portfolio>nav .bar-inner { height: 100%; border-radius: 2px; background: red; transition: all 0.3s; }
-section.portfolio>nav .bar.state-1 .bar-inner { margin-left: 0; width: 40px; }
-section.portfolio>nav .bar.state-2 .bar-inner { margin-left: 65px; width: 50px; }
-section.portfolio>nav .bar.state-3 .bar-inner { margin-left: 145px; width: 90px; }
-section.portfolio .works { position: relative; }
-section.portfolio .works>.big, section.portfolio .works>.small { position: absolute; }
+section.portfolio h2{ margin-bottom: 32px;}
+section.portfolio { text-align: center; margin-bottom: 50px; max-width: 720px;} 
+section.portfolio .swiper-container{ width: 668px; height: 501px;}
+section.portfolio .swiper-button-prev, .swiper-button-next { background-color: white; width: 64px; height: 64px; border-radius: 50%; right: 100%; left: auto;}
+section.portfolio .swiper-button-next{ left: 100%; right: auto;}

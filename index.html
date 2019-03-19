@@ -2,9 +2,14 @@
 <html>
   <head>
     <title>姜涛的个人简历</title>
-    <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./loading.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/swiper/dist/css/swiper.min.css"
+    />
     <script src="//at.alicdn.com/t/font_968023_j5pkrs3gnil.js"></script>
+    <script src="./node_modules/swiper/dist/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./main.css" />
     <style type="text/css">
       .icon {
         width: 1em;
@@ -13,7 +18,6 @@
         fill: currentColor;
         overflow: hidden;
       }
-
 
       .site-welcome {
         display: none;
@@ -201,39 +205,18 @@
     </section>
     <section data-x id="siteWorks" class="portfolio">
       <h2>作品集</h2>
-      <nav>
-        <ol class="clearfix">
-          <li id="portfolioAll">所有</li>
-          <li id="portfolioFrameWork">框架</li>
-          <li id="portfolioVallina">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfolioBar" class="bar state-1">
-          <div class="bar-inner"></div>
+      
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <img src="./img/works/page-nav.jpg" alt="" class="swiper-slide">
+          <img src="./img/works//canvas.jpg" alt="" class="swiper-slide">
+          <img src="./img/works/appleStyleSlides.jpg" alt="" class="swiper-slide">
         </div>
-      </nav>
-      <script>
-        portfolioAll.onclick = function() {
-          portfolioBar.className = "bar state-1";
-        };
-        portfolioFrameWork.onclick = function() {
-          portfolioBar.className = "bar state-2";
-        };
-        portfolioVallina.onclick = function() {
-          portfolioBar.className = "bar state-3";
-        };
-      </script>
-
-      <div class="works" style="height: 597px;">
-        <div class="big" style="top: 0; left:0">
-          <img src="./img/portfolio-1.jpg" alt="作品1" />
-        </div>
-        <div class="small" style="top: 0; left: 645px">
-          <img src="./img/portfolio-2.jpg" alt="作品2" />
-        </div>
-        <div class="small" style="top: 298px; left: 645px">
-          <img src="./img/portfolio-3.jpg" alt="作品3" />
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.js"></script>
     <script>
@@ -245,7 +228,7 @@
       for (let i = 0; i < specialTags.length; i++) {
         specialTags[i].classList.add("offset");
       }
-      
+
       setTimeout(function() {
         findClosest();
       }, 1000);
@@ -328,6 +311,22 @@
             .start(); // 開始緩動
         };
       }
+    </script>
+
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar"
+        }
+      });
     </script>
   </body>
 </html>
