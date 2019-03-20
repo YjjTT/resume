@@ -121,7 +121,7 @@
       范进行渲染，而不是使用一个不符合规范的渲染模式。
     </p>
   </main>
-  
+
   <section data-x id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
@@ -181,6 +181,16 @@
     </div>
   </section>
 
+  <section>
+    <h2>留言</h2>
+    <ol id="messageList">
+
+    </ol>
+    <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+      <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.js"></script>
   <script src="./js/auto-slide-up.js"></script>
   <script src="./js/sticky-topbar.js"></script>
@@ -191,6 +201,8 @@
     }, 1000);
   </script>
   <script src="./js/init-swiper.js"></script>
+  <script src="./node_modules/leancloud-storage/dist/av-min.js"></script>
+  <script src="./js/message.js"></script>
 </body>
 
 </html>
