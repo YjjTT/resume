@@ -1,5 +1,5 @@
 ! function () {
-    var view = document.querySelector('#mySildes')
+    var view = View('#mySildes')
     var controller = function (view) {
         var mySwiper = new Swiper(view.querySelector(".swiper-container"), {
             loop: true,

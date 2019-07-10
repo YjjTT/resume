@@ -1,5 +1,5 @@
 ! function () {
-    var view = document.querySelector('nav.menu')
+    var view = View('nav.menu')
     var controller = function (view) {
         let liTags = view.querySelectorAll("nav.menu > ul > li");
 
